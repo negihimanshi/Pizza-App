@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shopping</title>
+    <script src="./scripts/controllers/product-controller.js" type="module"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script defer src="./scripts/services/payment.js" type="module"></script>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="alert alert-info text-center">Pizza Shop</h1>
+        <div class="d-flex flex-column align-items-start" id="cartDisplay">
+            <h2>Your Basket</h2>
+            <ul id="basket" class="list-unstyled">
+                <!-- Create dynamic li -->
+            </ul>
+            <h5>Total:     Rs. <span id="totalAmount">0</span></h5>
+            <button id="rzp-button1" class="btn btn-primary mt-2">Pay</button>
+        </div>
+        <div class="row" id="output">
+        </div>
+    </div>
+</body>
+</html>
